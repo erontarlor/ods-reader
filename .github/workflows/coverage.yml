@@ -43,14 +43,13 @@ jobs:
           message: `${coverage}%`,
           color: 'brightgreen'
         };
-        fs.writeFileSync('coverage-badge.json', JSON.stringify(badge, null, 2)+'\n');
+        fs.writeFileSync('/tmp/coverage-badge.json', JSON.stringify(badge, null, 2)+'\n');
         EOF
 
     - name: Publish coverage badge
       run: |
         git fetch origin coverage:coverage
         git checkout coverage
-        cp coverage-badge.json /tmp/coverage-badge.json
         git rm -rf .
         cp /tmp/coverage-badge.json coverage-badge.json
         git config user.name "github-actions[bot]"
