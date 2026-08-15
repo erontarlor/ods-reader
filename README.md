@@ -115,6 +115,8 @@ docs/index.html
 
 in your browser.
 
+You can also find the API documentation of the latest version here: [Documentation](https://erontarlor.github.io/ods-reader/)
+
 ---
 
 ## Architecture
