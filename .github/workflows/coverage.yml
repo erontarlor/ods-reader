@@ -41,7 +41,7 @@ jobs:
           schemaVersion: 1,
           label: 'coverage',
           message: `${coverage}%`,
-          color: 'brightgreen'
+          color: coverage === 100 ? 'brightgreen' : 'red'
         };
         fs.writeFileSync('/tmp/coverage-badge.json', JSON.stringify(badge, null, 2)+'\n');
         EOF
