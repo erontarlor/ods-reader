@@ -45,7 +45,7 @@
     "test": "node --test",
     "test:unit": "node --test test/unit",
     "test:integration": "node --test test/integration",
-    "coverage": "c8 --reporter=text --reporter=html node --test",
+    "coverage": "c8 --reporter=text --reporter=html --reporter=json-summary node --test",
     "docs": "documentation build src/**/*.js -f html -o docs",
     "prepare": "npm run lint && npm run coverage"
   },
