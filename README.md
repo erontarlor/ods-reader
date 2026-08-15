@@ -1,6 +1,6 @@
 # ODS Reader
 
-[![npm version](https://img.shields.io/npm/v/ods-reader)](https://www.npmjs.com/package/ods-reader) [![Node.js CI](https://github.com/erontarlor/ods-reader/actions/workflows/node.js.yml/badge.svg)](https://github.com/erontarlor/ods-reader/actions/workflows/node.js.yml) [![Coverage](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/erontarlor/ods-reader/coverage/coverage-badge.json)](https://github.com/erontarlor/ods-reader/actions) [![GitHub License](https://img.shields.io/github/license/erontarlor/ods-reader)](LICENSE)
+[![npm version](https://img.shields.io/npm/v/ods-reader)](https://www.npmjs.com/package/ods-reader) [![Node.js CI](https://github.com/erontarlor/ods-reader/actions/workflows/node.js.yml/badge.svg)](https://github.com/erontarlor/ods-reader/actions/workflows/node.js.yml) [![Coverage](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/erontarlor/ods-reader/coverage/coverage-badge.json)](https://github.com/erontarlor/ods-reader/actions) [![GitHub License](https://img.shields.io/github/license/erontarlor/ods-reader)](https://github.com/erontarlor/ods-reader/blob/main/LICENSE)
  [![npm downloads](https://img.shields.io/npm/dm/ods-reader)](https://www.npmjs.com/package/ods-reader)
 
 A high-performance Node.js library for reading **OpenDocument Spreadsheet (ODS)** files with full **Rich Text** support.
