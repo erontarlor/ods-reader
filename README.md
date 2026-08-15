@@ -1,6 +1,6 @@
 # ODS Reader
 
-[![npm version](https://img.shields.io/npm/v/ods-reader.svg)](https://www.npmjs.com/package/ods-reader) [![Node.js CI](https://github.com/erontarlor/ods-reader/actions/workflows/node.js.yml/badge.svg)](https://github.com/erontarlor/ods-reader/actions/workflows/node.js.yml) [![Coverage Status](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/erontarlor/ods-reader/main/coverage-badge.json)](https://github.com/erontarlor/ods-reader) [![License](https://img.shields.io/github/license/erontarlor/ods-reader.svg)](LICENSE)
+[![npm version](https://img.shields.io/npm/v/ods-reader.svg)](https://www.npmjs.com/package/ods-reader) [![Node.js CI](https://github.com/erontarlor/ods-reader/actions/workflows/node.js.yml/badge.svg)](https://github.com/erontarlor/ods-reader/actions/workflows/node.js.yml) [![Coverage Status](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/erontarlor/ods-reader/main/coverage-badge.json)](https://github.com/erontarlor/ods-reader) [![License](https://img.shields.io/github/license/erontarlor/ods-reader.svg)](LICENSE) [![npm downloads](https://img.shields.io/npm/dm/ods-reader.svg)](https://www.npmjs.com/package/ods-reader)
 
 A high-performance Node.js library for reading **OpenDocument Spreadsheet (ODS)** files with full **Rich Text** support.
 
@@ -35,9 +35,9 @@ npm install ods-reader
 ## Quick Start
 
 ```javascript
-import { ODSReader } from 'ods-reader';
+import OdsReader from 'ods-reader';
 
-await ODSReader.read('example.ods', cell => {
+await OdsReader.readFile('example.ods', cell => {
 
   // Basic cell data
   console.log(cell.sheetName, cell.row, cell.column, cell.plainText);
@@ -176,4 +176,3 @@ Additional spreadsheet features such as formulas, cell values and comments will 
 ## License
 
 MIT License
-````
