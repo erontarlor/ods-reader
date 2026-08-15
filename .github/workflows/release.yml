@@ -1,0 +1,74 @@
+# This workflow will do a clean checkout, increase the version number, create the new documentation, push the change, tag the changes, perform a GitHub release and publish the new version to NPM
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
+
+name: Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      versionSelection:
+        description: "Select version to increase (major, minor, patch)"
+        required: true
+        default: "patch"
+        type: choice
+        options:
+          - major
+          - minor
+          - patch
+      releaseDescription:
+        description: "Enter release note"
+        required: true
+        type: string
+
+jobs:
+  release:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24.x
+          cache: 'npm'
+          registry-url: "https://registry.npmjs.org"
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Increase Version
+        run: |
+          npm version ${{ github.event.inputs.versionSelection }} -m "Increase version to %s"
+
+      - name: Extract Version
+        id: version
+        run: |
+          echo "version=$(node -p 'require(\"./package.json\").version')" >> $GITHUB_OUTPUT
+
+      - name: Build documentation
+        run: npm run docs
+
+      - name: Push Changes
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git push origin main
+          git push origin v${{ steps.version.outputs.version }}
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ steps.version.outputs.version }}
+          name: Release v${{ steps.version.outputs.version }}
+          body: ${{ github.event.inputs.releaseDescription }}
+          generate_release_notes: false
+          draft: false
+          prerelease: false
+
+      - name: Publish to NPM
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
