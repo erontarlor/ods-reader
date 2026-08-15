@@ -50,7 +50,7 @@ jobs:
       run: |
         git fetch origin coverage:coverage
         git checkout coverage
-        git rm -rf .
+        rm -rf .
         cp /tmp/coverage-badge.json coverage-badge.json
         git config user.name "github-actions[bot]"
         git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
