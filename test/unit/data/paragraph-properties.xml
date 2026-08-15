@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<office:document-styles
+    xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0"
+    xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0"
+    xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0">
+
+    <office:styles>
+
+        <style:style style:name="Paragraph" style:family="paragraph">
+            <style:paragraph-properties fo:text-align="center" fo:margin-top="1cm" fo:margin-right="2cm"  fo:margin-bottom="3cm" fo:margin-left="4cm" fo:text-indent="5cm" fo:line-height="120%"/>
+        </style:style>
+
+    </office:styles>
+
+</office:document-styles>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<office:document-styles
+    xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0"
+    xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0">
+
+    <office:styles>
+
+        <style:style style:name="A" style:family="text" style:parent-style-name="B"/>
+
+        <style:style style:name="B" style:family="text" style:parent-style-name="C"/>
+
+        <style:style style:name="C" style:family="text" style:parent-style-name="A"/>
+
+    </office:styles>
+
+</office:document-styles>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<office:document-styles
+    xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0"
+    xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0"
+    xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0">
+
+    <office:styles>
+
+        <style:default-style>
+            <style:text-properties fo:font-family="Invalid Font" fo:font-size="20pt"/>
+        </style:default-style>
+
+        <style:default-style style:family="text">
+            <style:text-properties fo:font-family="Liberation Sans" fo:font-size="10pt"/>
+            <style:paragraph-properties fo:text-align="center"/>
+            <style:table-cell-properties fo:background-color="#eeeeee"/>
+        </style:default-style>
+
+        <style:style style:name="Normal" style:family="text"/>
+
+        <style:style style:name="No Default" style:family="invalid family"/>
+
+    </office:styles>
+
+</office:document-styles>

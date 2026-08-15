@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<office:document-styles
+    xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0"
+    xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0"
+    xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0">
+
+    <office:styles>
+
+        <style:style style:name="Paragraph" style:family="paragraph">
+            <style:text-properties fo:font-family="Liberation Sans" fo:font-weight="bold"/>
+        </style:style>
+
+        <style:style style:name="Paragraph1" style:family="paragraph" style:parent-style-name="Paragraph"/>
+
+        <style:style style:name="Paragraph2" style:family="paragraph" style:parent-style-name="Paragraph">
+            <style:text-properties fo:font-weight="normal"/>
+        </style:style>
+
+    </office:styles>
+
+</office:document-styles>

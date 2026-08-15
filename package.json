@@ -1,0 +1,63 @@
+{
+  "name": "ods-reader",
+  "version": "0.1.0",
+  "private": true,
+  "description": "High-performance Node.js library for reading OpenDocument Spreadsheet (ODS) files with full rich-text support.",
+  "keywords": [
+    "ods",
+    "opendocument",
+    "spreadsheet",
+    "excel",
+    "calc",
+    "libreoffice",
+    "openoffice",
+    "reader",
+    "parser",
+    "xml",
+    "rich-text"
+  ],
+  "homepage": "https://github.com/erontarlor/ods-reader#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/<your-github-user>/ods-reader.git"
+  },
+  "bugs": {
+    "url": "https://github.com/erontarlor/ods-reader/issues"
+  },
+  "license": "MIT",
+  "author": "",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "files": [
+    "src",
+    "LICENSE",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "node --test",
+    "test:unit": "node --test test/unit",
+    "test:integration": "node --test test/integration",
+    "coverage": "c8 --reporter=text --reporter=html node --test",
+    "docs": "documentation build src/**/*.js -f html -o docs",
+    "prepare": "npm run lint && npm run coverage"
+  },
+  "dependencies": {
+    "fflate": "0.8.2",
+    "sax": "1.4.1"
+  },
+  "devDependencies": {
+    "c8": "11.0.0",
+    "documentation": "14.0.3",
+    "eslint": "10.8.0",
+    "eslint-plugin-jsdoc": "63.3.2",
+    "globals": "17.8.0"
+  }
+}

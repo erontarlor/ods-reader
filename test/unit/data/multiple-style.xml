@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<office:document-styles
+    xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0"
+    xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0"
+    xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0">
+
+    <office:styles>
+
+        <style:style style:name="Span1" style:family="text">
+            <style:text-properties fo:font-weight="bold"/>
+        </style:style>
+
+        <style:style style:name="Span2">
+            <style:text-properties fo:font-style="italic"/>
+        </style:style>
+
+        <style:style style:name="Paragraph" style:family="paragraph">
+            <style:paragraph-properties fo:text-align="center"/>
+        </style:style>
+
+    </office:styles>
+
+</office:document-styles>

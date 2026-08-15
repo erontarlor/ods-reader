@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<office:document-styles
+    xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0"
+    xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0"
+    xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0">
+
+    <office:styles>
+
+        <style:style style:name="Decoration" style:family="text">
+            <style:text-properties
+                style:text-underline-style="solid"
+                style:text-underline-type="type1"
+                style:text-underline-width="1"
+                style:text-underline-color="#ff0000"
+                style:text-overline-style="solid"
+                style:text-overline-type="type1"
+                style:text-overline-width="2"
+                style:text-overline-color="#00ff00"
+                style:text-line-through-style="solid"
+                style:text-line-through-type="type1"
+                style:text-line-through-width="3"
+                style:text-line-through-text="text"
+                style:text-outline="true"
+                style:text-position="position"/>
+        </style:style>
+
+    </office:styles>
+
+</office:document-styles>

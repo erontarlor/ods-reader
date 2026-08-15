@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<office:document-styles
+    xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0"
+    xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0"
+    xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0">
+
+    <office:styles>
+
+        <style:style style:name="Font" style:family="text">
+            <style:text-properties
+                fo:font-family="Arial"
+                fo:font-size="12pt"
+                fo:font-weight="bold"
+                fo:font-style="italic"
+                fo:font-variant="variant"
+                fo:font-stretch="scretch"
+                style:font-family-generic="generic"
+                style:font-pitch="pitch"/>
+        </style:style>
+
+    </office:styles>
+
+</office:document-styles>
