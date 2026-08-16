@@ -25,13 +25,13 @@ jobs:
         node-version: 24.x
         cache: 'npm'
 
-    - name: Install dependencies
+    - name: Install Dependencies
       run: npm ci
 
-    - name: Generate coverage
+    - name: Generate Coverage
       run: npm run coverage
 
-    - name: Generate coverage badge
+    - name: Generate Coverage Badge
       run: |
         node <<'EOF'
         const fs = require('fs');
@@ -46,7 +46,7 @@ jobs:
         fs.writeFileSync('/tmp/coverage-badge.json', JSON.stringify(badge, null, 2)+'\n');
         EOF
 
-    - name: Publish coverage badge
+    - name: Publish Coverage Badge
       run: |
         git fetch origin coverage:coverage
         git checkout coverage
