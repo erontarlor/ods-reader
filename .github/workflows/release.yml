@@ -50,6 +50,8 @@ jobs:
 
       - name: Increase Version
         run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
           npm version ${{ github.event.inputs.versionSelection }} -m "Increase version to %s"
 
       - name: Extract Version
