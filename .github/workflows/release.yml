@@ -19,6 +19,15 @@ on:
         description: "Enter release note"
         required: true
         type: string
+        default: |
+          ## Major|Feature|Patch release
+
+          What has changed?
+
+          ### Features
+          - One
+          - Two
+          - Three
 
 jobs:
   release:
