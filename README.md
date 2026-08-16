@@ -75,7 +75,7 @@ The callback receives
     {text: 'Hello ', style: {}},
     {text: 'World',  style: {fontWeight: 'bold'}}
   ],
-  styleAt: [{}, {} {} {} {} {}, {fontWeight: 'bold'}, {fontWeight: 'bold'}, {fontWeight: 'bold'}, {fontWeight: 'bold'}, {fontWeight: 'bold'}]
+  styleAt: [{}, {}, {}, {}, {}, {}, {fontWeight: 'bold'}, {fontWeight: 'bold'}, {fontWeight: 'bold'}, {fontWeight: 'bold'}, {fontWeight: 'bold'}]
 }
 ```
 
