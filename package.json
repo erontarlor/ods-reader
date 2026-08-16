@@ -1,6 +1,6 @@
 {
   "name": "ods-reader",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": false,
   "description": "High-performance Node.js library for reading OpenDocument Spreadsheet (ODS) files with full rich-text support.",
   "keywords": [
