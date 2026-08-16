@@ -15,6 +15,7 @@ on:
           - major
           - minor
           - patch
+
       releaseDescription:
         description: "Enter release note"
         required: true
@@ -31,7 +32,6 @@ on:
 
 jobs:
   release:
-
     runs-on: ubuntu-latest
 
     permissions:
@@ -51,27 +51,39 @@ jobs:
       - name: Install Dependencies
         run: npm ci
 
+      - name: Configure User
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
       - name: Increase Version
         run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "github-actions@github.com"
-          npm version ${{ github.event.inputs.versionSelection }} -m "Increase version to %s"
+          npm version ${{ github.event.inputs.versionSelection }} --no-git-tag-version
 
       - name: Extract Version
         id: version
         run: |
-          echo "version=$(node -p 'require(\"./package.json\").version')" >> $GITHUB_OUTPUT
+          VERSION=$(node -p "JSON.parse(require('fs').readFileSync('package.json', 'utf8')).version")
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "New version: $VERSION"
 
-      - name: Build documentation
+      - name: Build Documentation
         run: npm run docs
 
-      - name: Push Changes
-        id: version
+      - name: Commit Release
         run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "github-actions@github.com"
+          git add package.json package-lock.json docs
+          git commit -m "Release v${{ steps.version.outputs.version }}"
+
+      - name: Create Git Tag
+        run: |
+          git tag -a "v${{ steps.version.outputs.version }}" \
+            -m "Release v${{ steps.version.outputs.version }}"
+
+      - name: Push Release
+        run: |
           git push origin main
-          git push origin v${{ steps.version.outputs.version }}
+          git push origin "v${{ steps.version.outputs.version }}"
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
